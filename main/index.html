@@ -10,6 +10,13 @@
 </head>
 
 <body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="#">About Us</a>
+    <a href="../development/index.html">Development</a>
+    <a href="#">Design</a>
+  </div>
   <div class="navbar">
     <div class="logo">
       <div class="nav-img-logo">
@@ -23,13 +30,13 @@
       </div>
     </div>
     <div class="menu">
-      <a href="#" class="navlink">Home</a>
+      <a href="./index.html" class="navlink">Home</a>
       <a href="#" class="navlink">About Us</a>
-      <a href="#" class="navlink">Development</a>
+      <a href="../development/index.html" class="navlink">Development</a>
       <a href="#" class="navlink">Design</a>
     </div>
     <div class="side-nav">
-      &#9776;
+      <a href="javascript: void(0)" onclick="openNav()">&#9776;</a>
     </div>
 
   </div>
@@ -302,6 +309,7 @@
             </div>
           </div>
 
+
         </div>
 
       </div>
@@ -309,14 +317,14 @@
     <div class="footer">
       <div class="footer-social">
         <a href="#"><img src="../photos/social_icons/website.svg" alt="img"></a>
-        <a href="#"><img src="../photos/social_icons/fb.svg" alt=""></a>
+        <a href="#"><img src="../photos/social_icons/fb.svg" alt="" class="fb"></a>
         <a href="#"><img src="../photos/social_icons/instagram.svg" alt=""></a>
         <a href="#"><img src="../photos/social_icons/github.svg" alt=""></a>
-        <a href="#"><img src="../photos/social_icons/gitter.svg" alt=""></a>
+        <a href="#"><img src="../photos/social_icons/gitter.svg" alt="" class="gitter"></a>
       </div>
       <div class="footer-links">
         <a href="#">ABOUT US</a>
-        <a href="#">DEVELOPMENT</a>
+        <a href="../development/index.html">DEVELOPMENT</a>
         <a href="#">DESIGN</a>
       </div>
     </div>
@@ -334,6 +342,14 @@
       } else {
         navbar.classList.remove("box-shadow");
       }
+    }
+
+    function openNav() {
+      document.querySelector("#mySidenav").style.width = "350px";
+    }
+
+    function closeNav() {
+      document.querySelector("#mySidenav").style.width = "0";
     }
   </script>
 </body>
