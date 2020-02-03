@@ -26,6 +26,42 @@ h1 {
   padding-bottom: 3.5em;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  background-color: rgb(41, 59, 82);
+  overflow-x: hidden;
+  transition: 0.1s;
+  padding-top: 60px;
+  margin-top: 4em;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  display: block;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.sidenav a:nth-child(2) {
+  color: #f8d16c
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  font-size: 60px;
+  margin-left: 50px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -58,13 +94,13 @@ h1 {
 
 .nav-img-logo>img {
   display: inline-block;
-  width: 70px;
+  width: 65px;
 }
 
 .nav-recruitments {
   grid-area: 1 / 2 / span 1 / span 1;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1rem;
   margin-left: 1em;
   color: #000000;
@@ -74,7 +110,7 @@ h1 {
 .nav-2020 {
   grid-area: 2 / 2 / span 1 / span 1;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1rem;
   margin-left: 1em;
   color: #000000;
@@ -84,6 +120,8 @@ h1 {
   grid-area: 2 / 3 / span 1 / span 1;
   background-color: #FFF;
   text-align: right;
+  position: relative;
+  top:
 }
 
 .side-nav {
@@ -95,20 +133,27 @@ h1 {
   font-size: 1.5em;
 }
 
+.side-nav>a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #000000;
+}
+
 .navlink {
-  font-size: 0.7em;
+  font-size: 0.6em;
   line-height: 0.67rem;
   color: #3B3736;
   text-decoration: none;
   text-transform: uppercase;
   margin: 0 20px;
   position: relative;
-  top: 20px;
+  top: 25px;
 }
 
-/* .navlink:nth-child(1) {
+.navlink:nth-child(1) {
   font-weight: 900;
-} */
+}
+
 .content {
   background-color: #FFFFFF;
   grid-area: 2 / 2 / span 4 / span 2;
@@ -135,7 +180,6 @@ h1 {
 .heading-box {
   background: #F8D16C;
   position: absolute;
-  width: 35%;
   height: 40px;
   left: 60px;
   bottom: 20px;
@@ -150,9 +194,9 @@ button {
   border: none;
   padding: 0.5rem 2rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   user-select: none;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
 .dev-or-des {
@@ -177,22 +221,34 @@ button {
 }
 
 .developers {
+  grid-area: 2 / 2 / span 1 / span 1;
+  display: grid;
+  grid-template: auto auto auto / auto;
+}
+
+.developers .heading-box {
+  left: 90px;
+  width: 250px;
+  bottom: 25px;
+}
+
+.designers {
   grid-area: 1 / 2 / span 1 / span 1;
   display: grid;
   grid-template: auto auto auto / auto;
 }
 
-.designers {
-  grid-area: 2 / 2 / span 1 / span 1;
-  display: grid;
-  grid-template: auto auto auto / auto;
+.designers .heading-box {
+  left: 45px;
+  width: 150px;
+  bottom: 25px;
 }
 
 .dev-or-des-content {
   grid-area: 2 / 1 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: normal;
-  font-size: 0.87em;
+  font-size: 0.77em;
   color: #878787;
   margin-top: 0.7em;
   margin-bottom: 1.25em
@@ -210,8 +266,8 @@ button {
 }
 
 .timeline .heading-box {
-  width: 250px;
-  bottom: 20px;
+  width: 200px;
+  bottom: 27px;
 }
 
 .timeline img {
@@ -237,8 +293,8 @@ button {
 }
 
 .event-complete {
-  height: 80px;
-  width: 5px;
+  height: 163px;
+  width: 8px;
   background-color: #F8D16C;
   display: block;
   margin: 0 auto;
@@ -257,6 +313,7 @@ button {
   width: 100%;
   height: 4px;
   background: #f8d16c;
+  margin-left: 38px;
 }
 
 .lower-events {
@@ -268,6 +325,8 @@ button {
 .event {
   display: grid;
   grid-template: auto auto / auto auto;
+  position: relative;
+  bottom: 2px;
 }
 
 .event-illustration {
@@ -278,10 +337,10 @@ button {
   grid-area: 1 / 2 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.7em;
   color: #000000;
   position: relative;
-  top: 20px;
+  top: 35px;
   left: 10px;
 }
 
@@ -289,7 +348,7 @@ button {
   grid-area: 2 / 2 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.7em;
   color: #000000;
   position: relative;
   left: 10px;
@@ -304,7 +363,8 @@ button {
 }
 
 .why-img .heading-box {
-  width: 250px;
+  left: 70px;
+  width: 200px;
   bottom: 60px;
 }
 
@@ -312,7 +372,7 @@ button {
   grid-area: 2 / 1 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: normal;
-  font-size: 0.87em;
+  font-size: 0.77em;
   color: #878787;
   margin-top: 0.7em;
   margin-bottom: 0px;
@@ -337,6 +397,8 @@ button {
   grid-area: 4 / 1 / span 1 / span 1;
   margin-bottom: 150px;
   text-align: center;
+  width: 80%;
+  padding-left: 120px;
 }
 
 .updates .update-item {
@@ -355,7 +417,7 @@ button {
   display: grid;
   grid-template: auto auto / auto;
   grid-gap: 5px;
-  padding: 20px 200px;
+  padding: 20px 20px;
 }
 
 .update-item:nth-child(even) {
@@ -366,23 +428,23 @@ button {
   grid-area: 1 / 1 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 0.7em;
   line-height: 0.75rem;
   color: #9e9e9e;
+  width: 100%;
 }
 
 .update-item-content {
   grid-area: 2 / 1 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: normal;
-  font-size: 0.8em;
+  font-size: 0.7em;
   line-height: 1rem;
   color: #666666;
   margin-top: 0.5em;
 }
 
 .footer {
-  background-color: purple;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -403,6 +465,15 @@ button {
   width: 17px;
   margin-right: 20px;
 }
+
+.footer .fb {
+  width: 12px;
+}
+
+.footer .gitter {
+  width: 14px;
+}
+
 
 .footer-links {
   grid-area: 2 / 3 / span 1 / span 1;
@@ -543,7 +614,7 @@ button {
   color: #CCCCCC;
   font-size: 0.8em;
   position: relative;
-  top: 20px;
+  top: 40px;
   right: 5px;
 }
 
@@ -586,15 +657,26 @@ button {
   .timeline-timeline-sm {
     display: inline-block;
   }
+
+  .why-img .heading-box {
+    left: 70px;
+    width: 200px;
+    bottom: 30px;
+  }
 }
 
 @media (max-width: 1350px) {
+
+  .updates {
+    padding-left: 50px;
+  }
+
   .menu {
     display: none;
   }
 
   .side-nav {
-    display: inline-block;
+    display: inline;
   }
 
   .assignment-choice-1 {
@@ -622,6 +704,7 @@ button {
     color: #CCCCCC;
     font-size: 0.8em;
     text-align: center;
+    top: 0;
   }
 
   .or-line-down {
@@ -637,5 +720,18 @@ button {
     grid-area: 3 / 1 / span 1 / span 1;
   }
 
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .main {
+    display: grid;
+    grid-template: auto auto auto auto auto / 5% auto auto 5%;
+  }
 
 }
