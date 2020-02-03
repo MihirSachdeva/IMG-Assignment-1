@@ -46,13 +46,15 @@ h1 {
   font-size: 1.5em;
   color: #FFFFFF;
   display: block;
+  transition: 0.3s;
   text-transform: uppercase;
   margin-top: 20px;
 }
 
-.sidenav a:nth-child(2) {
+.sidenav a:nth-child(4) {
   color: #f8d16c
 }
+
 
 .sidenav .closebtn {
   position: absolute;
@@ -150,7 +152,7 @@ h1 {
   top: 25px;
 }
 
-.navlink:nth-child(1) {
+.navlink:nth-child(3) {
   font-weight: 900;
 }
 
@@ -244,6 +246,7 @@ button {
   bottom: 25px;
 }
 
+
 .dev-or-des-content {
   grid-area: 2 / 1 / span 1 / span 1;
   font-family: Nunito Sans;
@@ -267,7 +270,7 @@ button {
 
 .timeline .heading-box {
   width: 200px;
-  bottom: 27px;
+  bottom: 20px;
 }
 
 .timeline img {
@@ -293,8 +296,8 @@ button {
 }
 
 .event-complete {
-  height: 163px;
-  width: 8px;
+  height: 80px;
+  width: 5px;
   background-color: #F8D16C;
   display: block;
   margin: 0 auto;
@@ -313,7 +316,6 @@ button {
   width: 100%;
   height: 4px;
   background: #f8d16c;
-  margin-left: 38px;
 }
 
 .lower-events {
@@ -340,7 +342,7 @@ button {
   font-size: 0.7em;
   color: #000000;
   position: relative;
-  top: 35px;
+  top: 20px;
   left: 10px;
 }
 
@@ -397,8 +399,6 @@ button {
   grid-area: 4 / 1 / span 1 / span 1;
   margin-bottom: 150px;
   text-align: center;
-  width: 80%;
-  padding-left: 120px;
 }
 
 .updates .update-item {
@@ -417,7 +417,7 @@ button {
   display: grid;
   grid-template: auto auto / auto;
   grid-gap: 5px;
-  padding: 20px 20px;
+  padding: 20px 200px;
 }
 
 .update-item:nth-child(even) {
@@ -428,17 +428,16 @@ button {
   grid-area: 1 / 1 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 0.8em;
   line-height: 0.75rem;
   color: #9e9e9e;
-  width: 100%;
 }
 
 .update-item-content {
   grid-area: 2 / 1 / span 1 / span 1;
   font-family: Nunito Sans;
   font-weight: normal;
-  font-size: 0.7em;
+  font-size: 0.8em;
   line-height: 1rem;
   color: #666666;
   margin-top: 0.5em;
@@ -474,7 +473,6 @@ button {
   width: 14px;
 }
 
-
 .footer-links {
   grid-area: 2 / 3 / span 1 / span 1;
   text-align: right;
@@ -497,8 +495,9 @@ button {
 }
 
 .page-heading>.year-title {
-  margin-top: 1em;
+  margin-top: 1.2em;
   font-size: 2.3em;
+  color: #3B3736;
 }
 
 .dev-main {
@@ -575,7 +574,7 @@ button {
 .method-description {
   margin-top: 20px;
   font-family: Nunito Sans;
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: #666666;
 }
 
@@ -614,8 +613,8 @@ button {
   color: #CCCCCC;
   font-size: 0.8em;
   position: relative;
-  top: 40px;
-  right: 5px;
+  top: 35px;
+  right: 10px;
 }
 
 .or-line-down {
@@ -628,6 +627,16 @@ button {
 .assignment-choice-2 {
   grid-area: 1 / 3 / span 1 / span 1;
 }
+
+.assignment-grid .method-heading {
+  font-size: 0.8em;
+  margin-top: 30px;
+}
+
+.assignment-grid .method-description {
+  padding-right: 15px;
+}
+
 
 .second-yr {
   margin-top: 80px;
@@ -657,20 +666,9 @@ button {
   .timeline-timeline-sm {
     display: inline-block;
   }
-
-  .why-img .heading-box {
-    left: 70px;
-    width: 200px;
-    bottom: 30px;
-  }
 }
 
 @media (max-width: 1350px) {
-
-  .updates {
-    padding-left: 50px;
-  }
-
   .menu {
     display: none;
   }
@@ -704,7 +702,8 @@ button {
     color: #CCCCCC;
     font-size: 0.8em;
     text-align: center;
-    top: 0;
+    position: relative;
+    top: -10px;
   }
 
   .or-line-down {
@@ -720,6 +719,10 @@ button {
     grid-area: 3 / 1 / span 1 / span 1;
   }
 
+  .first-yr, .second-yr, .method-heading {
+    text-align: center;
+  }
+
   .footer {
     display: flex;
     justify-content: center;
@@ -728,10 +731,4 @@ button {
   .footer-links {
     display: none;
   }
-
-  .main {
-    display: grid;
-    grid-template: auto auto auto auto auto / 5% auto auto 5%;
-  }
-
 }
